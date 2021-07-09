@@ -1,0 +1,40 @@
+---
+
+
+- name: Installing Packages
+
+  hosts: all 
+
+  become: true
+
+  tasks:
+  - name: Install nginx
+    yum: 
+      name: nginx
+      state: latest
+
+  - name: start nginx
+    service: 
+      name: nginx
+      state: started
+
+  - name: Install postgresql
+    yum: 
+      name: postgresql
+      state: latest
+ 
+  - name: start postgresql
+    service:
+      name: postgresql
+      state: started  
+
+
+    
+   
+
+
+
+
+
+
+
