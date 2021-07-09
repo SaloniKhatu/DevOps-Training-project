@@ -1,0 +1,19 @@
+---
+- hosts: all
+  name: add user
+  tasks:
+
+  - name: add groups
+    group: 
+     name: DevOps
+     state: present
+
+ 
+
+
+  - name: add user saloni
+    user: 
+      name: Saloni
+      state: present
+      group: DevOps 
+  
