@@ -1,0 +1,13 @@
+---
+-
+  hosts: all
+  gather_facts: true
+  become: true
+  tasks:
+    -
+      name: "Uninstall nano"
+      tags: uninstall_nano
+      yum:
+        name: nano
+        autoremove: yes
+        state: absent 
