@@ -1,0 +1,11 @@
+
+
+
+---
+- hosts: all
+  tasks:
+  - name: create a file in home directory
+    file: 
+      path: "/home/55"
+      state: directory
+    become: yes
